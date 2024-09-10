@@ -1,0 +1,154 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.top-bar {
+  background-color: #ffffff;
+  border-bottom: 1px solid #dcdcdc;
+  padding: 10px 20px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  display: flex;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.logo {
+  margin-left: 0; /* Pegado al borde izquierdo de la top bar */
+  margin-right: 2cm; /* Espacio de 2 cm entre el logo y el campo de búsqueda */
+  display: inline-flex; /* Alinea el logo como un botón */
+  align-items: center;
+  justify-content: center;
+  padding: 5px; /* Espacio interno del botón */
+  border-radius: 8px; /* Bordes ligeramente redondeados */
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  position: relative;
+  left: -10px; /* Ajuste para mover el logo más a la izquierda */
+}
+
+.logo img {
+  height: 40px;
+}
+
+.logo:hover {
+  background-color: #f0f0f0;
+  transform: scale(1.05);
+}
+
+.search {
+  flex: 1;
+  margin-right: 5cm;
+  position: relative;
+}
+
+.search input {
+  border: 1px solid #08428D;
+  border-radius: 20px;
+  padding: 10px 20px;
+  outline: none;
+  width: 100%;
+  max-width: 500px;
+  transition: box-shadow 0.3s ease;
+}
+
+.search input::placeholder {
+  color: #08428D;
+}
+
+.search input:focus {
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+}
+
+.buttons {
+  display: flex;
+  gap: 0.5cm;
+}
+
+.button {
+  text-decoration: none;
+  color: #ffffff;
+  background-color: #08428D;
+  padding: 10px 20px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  text-align: center;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.button:hover {
+  background-color: #062C70;
+  transform: scale(1.05);
+}
+
+/* Estilo para el contenido */
+
+.content {
+  margin-top: 100px; /* Para asegurar que el texto no esté superpuesto con la top-bar fija */
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centra los elementos en la página */
+}
+
+.headline {
+  color: #08428D;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fuente moderna sans-serif */
+  font-size: 64px; /* Doble del tamaño original */
+  font-weight: 300;
+  line-height: 1.2; /* Línea más compacta para mantener el estilo limpio */
+  text-align: center; /* Alineación centrada para mejor estética */
+  max-width: 900px; /* Limita el ancho para mejorar la legibilidad */
+  margin: 0; /* Elimina el centrado automático */
+  padding: 20px; /* Espacio alrededor del texto */
+}
+
+.image-carousel {
+  display: flex;
+  gap: 20px; /* Espacio entre las imágenes */
+  margin-top: 60px; /* Espacio superior entre el texto y las imágenes */
+}
+
+.image-carousel img {
+  border-radius: 15px; /* Borde redondeado */
+  width: 550px; /* Ancho fijo para las imágenes */
+  height: auto; /* Mantiene la proporción de la imagen */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición suave para los efectos */
+}
+
+.image-carousel img:hover {
+  transform: scale(1.05); /* Escala la imagen al pasar el cursor */
+  box-shadow: 20px 20px 20px #08428d6f; /* Sombra ligera para el efecto hover */
+}
+
+.footer {
+  background-color: #08428D; /* Color azul de fondo */
+  color: #ffffff; /* Color del texto */
+  text-align: center; /* Centrar el texto */
+  padding: 20px; /* Espacio interno */
+  position: fixed; /* Fijo en la parte inferior */
+  bottom: 0; /* Pegado al fondo de la página */
+  width: 100%; /* Ocupa todo el ancho de la página */
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1); /* Sombra ligera en la parte superior */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fuente moderna sans-serif */
+}
+
+.footer p {
+  margin: 0; /* Elimina márgenes automáticos */
+  font-size: 14px; /* Tamaño de fuente */
+}
